@@ -1,6 +1,6 @@
-'''EX01 Wordle'''
+"""EX01 Wordle!"""
 
-__author__ = "730482131"
+__author__: str = "730482131"
 
 word: str = input("Enter a 5-character word: ")
 if len(word) != 5:
@@ -32,5 +32,7 @@ if letter == word[4]:
 
 if count == 0:
     print("No instances of " + letter + " found in " + word)
-elif count != 0:
+elif count == 1:
+    print(str(count) + " instance of " + letter + " found in " + word)
+else:
     print(str(count) + " instances of " + letter + " found in " + word)
