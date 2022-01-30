@@ -11,7 +11,7 @@ letter: str = input("Enter a single character: ")
 if len(letter) != 1:
     print("Error: Character must contain a single character.")
     exit()
-
+print("Searching for " + letter + " in " + word)
 count: int = 0
 
 if letter == word[0]:
