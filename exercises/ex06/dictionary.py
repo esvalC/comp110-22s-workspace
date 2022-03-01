@@ -4,7 +4,7 @@
 __author__ = "730482131"
 
 
-def invert(switch: dict[str, str]) -> dict:
+def invert(switch: dict[str, str]) -> dict[str, str]:
     """Switch a roo."""
     swap: dict[str, str]
     swap = dict()

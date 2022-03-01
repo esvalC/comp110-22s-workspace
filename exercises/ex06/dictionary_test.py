@@ -12,9 +12,9 @@ import pytest
 
 # Invert tests
 def test_invert_empty() -> None:
-    """Doo a switch-a-roo but empty."""
-    switch = {}
-    assert invert(switch) == {}
+    """Doo a switch-a-roo but empty lol."""
+    switch = {"": ""}
+    assert invert(switch) == {"": ""}
 
 
 def test_invert_one_set() -> None:
@@ -33,7 +33,7 @@ with pytest.raises(KeyError):
     switch = {"cal": "jackie", "potato": "jackie"}
     invert(switch)
 
-    
+
 # Fav colors!!
 def test_favorite_color_empty() -> None:
     """I dont like this function so I refuse to give it a description."""
@@ -56,17 +56,17 @@ def test_favorite_color_tie() -> None:
 # count
 def test_count_empty() -> None:
     """This was easier, it makes a dictionary with the amount of times a word is in a list."""
-    things = []
-    assert count(things) == {}
+    things = [""]
+    assert count(things) == {"": 0}
 
 
 def test_count_double() -> None:
-    """This was easier, it makes a dictionary with the amount of times a word is in a list."""
+    """This was easier, it makes a dictionary with the amount of times a word is in a list, this one has more."""
     things = ["cal", "jackie", "jackie"]
     assert count(things) == {"cal": 1, "jackie": 2}
 
 
 def test_count_lots() -> None:
-    """This was easier, it makes a dictionary with the amount of times a word is in a list."""
+    """This was easier, it makes a dictionary with the amount of times a word is in a list, this one has even more."""
     things = ["cal", "jackie", "jackie", "cal", "jackie", "jackie", "cal", "jackie", "jackie"]
     assert count(things) == {"cal": 3, "jackie": 6}
