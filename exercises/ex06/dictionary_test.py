@@ -7,7 +7,6 @@ __author__ = "730482131"
 from dictionary import invert
 from dictionary import favorite_color
 from dictionary import count
-import pytest
 
 
 # Invert tests
@@ -27,11 +26,6 @@ def test_invert_two_sets() -> None:
     """Doo a switch-a-roo with multiple pairs."""
     switch = {"a": "z", "b": "y"}
     assert invert(switch) == {"z": "a", "y": "b"}
-
-
-with pytest.raises(KeyError):
-    switch = {"cal": "jackie", "potato": "jackie"}
-    invert(switch)
 
 
 # Fav colors!!
@@ -57,7 +51,7 @@ def test_favorite_color_tie() -> None:
 def test_count_empty() -> None:
     """This was easier, it makes a dictionary with the amount of times a word is in a list."""
     things = [""]
-    assert count(things) == {"": 0}
+    assert count(things) == {}
 
 
 def test_count_double() -> None:

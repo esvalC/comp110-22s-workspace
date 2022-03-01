@@ -36,7 +36,7 @@ def count(things: list[str]) -> dict[str, int]:
     digit: dict[str, int]
     digit = dict()
     i: int = 0
-    while i < len(things):
+    while i < len(things) - 1:
         if things[i] in digit:
             digit[things[i]] += 1
             i += 1
