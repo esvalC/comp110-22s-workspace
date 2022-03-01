@@ -7,6 +7,7 @@ __author__ = "730482131"
 from dictionary import invert
 from dictionary import favorite_color
 from dictionary import count
+import pytest
 
 
 # Invert tests
@@ -64,3 +65,8 @@ def test_count_lots() -> None:
     """This was easier, it makes a dictionary with the amount of times a word is in a list, this one has even more."""
     things = ["cal", "jackie", "jackie", "cal", "jackie", "jackie", "cal", "jackie", "jackie"]
     assert count(things) == {"cal": 3, "jackie": 6}
+
+
+with pytest.raises(KeyError):
+    switch = {'courbois': 'calvin', 'klein': 'calvin'}
+    invert(switch)

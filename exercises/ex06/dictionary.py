@@ -4,12 +4,22 @@
 __author__ = "730482131"
 
 
+# def invert(switch: dict[str, str]) -> dict[str, str]:
+#     """Switch a roo."""
+#     swap: dict[str, str]
+#     swap = dict()
+#     for x, y in switch.items():
+#         swap[y] = x
+#     return swap
 def invert(switch: dict[str, str]) -> dict[str, str]:
     """Switch a roo."""
     swap: dict[str, str]
     swap = dict()
-    for x, y in switch.items():
-        swap[y] = x
+    for key in switch:
+        if switch[key] in swap:
+            raise KeyError
+        else:
+            swap[switch[key]] = key
     return swap
 
 
@@ -36,7 +46,7 @@ def count(things: list[str]) -> dict[str, int]:
     digit: dict[str, int]
     digit = dict()
     i: int = 0
-    while i < len(things) - 1:
+    while i < len(things):
         if things[i] in digit:
             digit[things[i]] += 1
             i += 1
