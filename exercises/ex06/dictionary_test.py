@@ -7,6 +7,7 @@ __author__ = "730482131"
 from dictionary import invert
 from dictionary import favorite_color
 from dictionary import count
+import pytest
 
 
 # Invert tests
@@ -28,6 +29,11 @@ def test_invert_two_sets() -> None:
     assert invert(switch) == {"z": "a", "y": "b"}
 
 
+with pytest.raises(KeyError):
+    switch = {"cal": "jackie", "potato": "jackie"}
+    invert(switch)
+
+    
 # Fav colors!!
 def test_favorite_color_empty() -> None:
     """I dont like this function so I refuse to give it a description."""
